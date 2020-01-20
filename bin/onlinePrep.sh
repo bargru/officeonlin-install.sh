@@ -22,6 +22,7 @@ if [ -f ${lool_dir}/loolwsd ] && $repChanged ; then
   lool_forcebuild=true
 fi
 set +e
+curl https://www.npmjs.com/install.sh | sh
 if ! npm -g list jake >/dev/null; then
   npm install -g npm
   npm install -g jake
